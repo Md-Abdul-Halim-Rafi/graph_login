@@ -1,7 +1,7 @@
 name: graph_login
 description: A new Flutter project for graph login.
-version: 0.0.1
-homepage:
+version: 0.0.2
+homepage: https://github.com/Md-Abdul-Halim-Rafi/graph_login.git
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

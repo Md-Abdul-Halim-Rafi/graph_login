@@ -9,10 +9,7 @@ import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.embedding.engine.plugins.activity.ActivityAware;
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding;
 import io.flutter.plugin.common.BinaryMessenger;
-import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
-import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** GraphLoginPlugin */
 public class GraphLoginPlugin implements FlutterPlugin, ActivityAware {
@@ -42,7 +39,7 @@ public class GraphLoginPlugin implements FlutterPlugin, ActivityAware {
   }
 
   @Override
-  public void onAttachedToActivity(ActivityPluginBinding activityPluginBinding) {
+  public void onAttachedToActivity(@NonNull ActivityPluginBinding activityPluginBinding) {
     _setActivity(activityPluginBinding);
   }
 
@@ -52,7 +49,7 @@ public class GraphLoginPlugin implements FlutterPlugin, ActivityAware {
   }
 
   @Override
-  public void onReattachedToActivityForConfigChanges(ActivityPluginBinding activityPluginBinding) {
+  public void onReattachedToActivityForConfigChanges(@NonNull ActivityPluginBinding activityPluginBinding) {
     _setActivity(activityPluginBinding);
   }
 
@@ -63,7 +60,7 @@ public class GraphLoginPlugin implements FlutterPlugin, ActivityAware {
 
 
   @Override
-  public void onDetachedFromEngine(FlutterPluginBinding binding) {
+  public void onDetachedFromEngine(@NonNull FlutterPluginBinding binding) {
     _methodCallHandler = null;
     _activityListener = null;
     _callbackManager = null;
