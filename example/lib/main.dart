@@ -1,7 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutter/services.dart';
 import 'package:graph_login/graph_login.dart';
 
 void main() {
@@ -16,36 +17,22 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  late GraphLogin _plugin;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _plugin = GraphLogin(appId: "869831583747221", debug: true);
-
-    _getSdk();
-  }
-
-  Future<void> _getSdk() async {
-
-    final sdk = await _plugin.sdkVersion;
-    print(sdk);
-  }
-
   Future<void> _login() async {
-
-    final sdk = await _plugin.sdkVersion;
-    print(sdk);
+    GraphLogin _plugin = GraphLogin(appId: "APP-ID-1", debug: true);
 
     var res = await _plugin.logIn(
-      permissions: [
-        GraphPermission.email,
-        GraphPermission.publicProfile
-      ]
-    );
+        permissions: [GraphPermission.email, GraphPermission.publicProfile]);
 
-    print(res.accessToken);
+    log(res.accessToken!.token, name: "DEFAULT");
+  }
+
+  Future<void> _changeAppID() async {
+    GraphLogin _graphLogin = GraphLogin(appId: "APP-ID-2", debug: true);
+
+    var res = await _graphLogin.logIn(
+        permissions: [GraphPermission.email, GraphPermission.publicProfile]);
+
+    log(res.accessToken!.token, name: "PAGE");
   }
 
   @override
@@ -56,9 +43,18 @@ class _MyAppState extends State<MyApp> {
           title: const Text("Example Graph Login"),
         ),
         body: Center(
-          child: ElevatedButton(
-            child: const Text("Login"),
-            onPressed: _login,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                child: const Text("Default App ID & Login"),
+                onPressed: _login,
+              ),
+              ElevatedButton(
+                child: const Text("Change App ID & Login"),
+                onPressed: _changeAppID,
+              )
+            ],
           ),
         ),
       ),

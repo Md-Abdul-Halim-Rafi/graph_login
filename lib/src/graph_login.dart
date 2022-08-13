@@ -61,6 +61,7 @@ class GraphLogin {
 
   /// Set Application ID.
   Future<void> setAppId({String? appId}) {
+
     if (debug) _log('Set App ID: $appId');
 
     if (appId != null) {
@@ -195,6 +196,7 @@ class GraphLogin {
 
   Future<GraphLoginResult> _invokeLoginMethod(String method,
       [Map<String, Object>? arguments]) async {
+
     final loginResultData =
     await _channel.invokeMethod<Map>(_methodLogIn, arguments);
 

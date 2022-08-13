@@ -1,4 +1,4 @@
-group 'co.hypescout.graph_login'
+group 'me.halimrafi.graph_login'
 version '1.0'
 
 buildscript {

@@ -1,0 +1,43 @@
+PODS:
+  - FBAEMKit (14.1.0):
+    - FBSDKCoreKit_Basics (= 14.1.0)
+  - FBSDKCoreKit (14.1.0):
+    - FBAEMKit (= 14.1.0)
+    - FBSDKCoreKit_Basics (= 14.1.0)
+  - FBSDKCoreKit_Basics (14.1.0)
+  - FBSDKLoginKit (14.1.0):
+    - FBSDKCoreKit (= 14.1.0)
+  - Flutter (1.0.0)
+  - graph_login (1.0.0):
+    - FBSDKCoreKit (= 14.1.0)
+    - FBSDKLoginKit (= 14.1.0)
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - graph_login (from `.symlinks/plugins/graph_login/ios`)
+
+SPEC REPOS:
+  trunk:
+    - FBAEMKit
+    - FBSDKCoreKit
+    - FBSDKCoreKit_Basics
+    - FBSDKLoginKit
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  graph_login:
+    :path: ".symlinks/plugins/graph_login/ios"
+
+SPEC CHECKSUMS:
+  FBAEMKit: a899515e45476027f73aef377b5cffadcd56ca3a
+  FBSDKCoreKit: 24f8bc8d3b5b2a8c5c656a1329492a12e8efa792
+  FBSDKCoreKit_Basics: 6e578c9bdc7aa1365dbbbde633c9ebb536bcaa98
+  FBSDKLoginKit: 787de205d524c3a4b17d527916f1d066e4361660
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  graph_login: c7caf295dd6a67d24d32aaa0e4203bebec91e9b9
+
+PODFILE CHECKSUM: 84c5059e8d99814fa57afc504089bbe254b3155f
+
+COCOAPODS: 1.11.3

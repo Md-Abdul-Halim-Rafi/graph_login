@@ -1,4 +1,4 @@
-package co.hypescout.graph_login_example;
+package me.halimrafi.graph_login_example;
 
 import io.flutter.embedding.android.FlutterActivity;
 

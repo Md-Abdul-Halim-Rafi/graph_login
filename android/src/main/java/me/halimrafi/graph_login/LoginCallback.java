@@ -1,4 +1,4 @@
-package co.hypescout.graph_login;
+package me.halimrafi.graph_login;
 
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;

@@ -1,6 +1,6 @@
 name: graph_login
-description: A new Flutter project for graph login.
-version: 0.0.2
+description: Flutter package for graph login.
+version: 1.0.0
 homepage: https://github.com/Md-Abdul-Halim-Rafi/graph_login.git
 
 environment:
@@ -30,7 +30,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: co.hypescout.graph_login
+        package: me.halimrafi.graph_login
         pluginClass: GraphLoginPlugin
       ios:
         pluginClass: GraphLoginPlugin
