@@ -1,4 +1,4 @@
-package co.hypescout.graph_login;
+package me.halimrafi.graph_login;
 
 public class ErrorCode {
     public static final String UNKNOWN = "UNKNOWN";
